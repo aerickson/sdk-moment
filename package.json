@@ -1,20 +1,45 @@
 {
+  "name": "moment",
+  "version": "0.1.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@fitbit/sdk": "~6.1.0",
+    "@fitbit/sdk-cli": "^1.7.3"
+  },
   "fitbit": {
+    "appUUID": "5be45b4d-9340-48ab-9904-36eae5e4895a",
     "appType": "clockface",
-    "appDisplayName": "SDK Moment",
+    "appDisplayName": "Padbury Clock",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#ffffff",
     "requestedPermissions": [
       "access_activity",
+      "access_aod",
+      "access_app_cluster_storage",
+      "access_calendars",
+      "access_exercise",
       "access_heart_rate",
-      "access_user_profile"
+      "access_internet",
+      "access_location",
+      "run_background",
+      "access_sleep",
+      "access_user_profile",
+      "run_background"
     ],
     "buildTargets": [
-      "higgs",
-      "meson"
+      "atlas",
+      "vulcan"
     ],
-    "i18n": {
-      "en": {
-        "name": "SDK Moment"
-      }
-    }
+    "i18n": {},
+    "defaultLanguage": "en-US",
+    "appClusterID": [
+      "com.example.moment"
+    ],
+    "developerID": "get_from_gam_dot_fitbit_dot_com"
+  },
+  "scripts": {
+    "build": "fitbit-build",
+    "debug": "fitbit"
   }
 }
